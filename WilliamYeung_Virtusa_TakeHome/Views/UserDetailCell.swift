@@ -16,7 +16,7 @@ class UserDetailCell: UITableViewCell {
             guard let user = user else { return }
             
             let userVM = UserViewModel(user: user)
-            displayName.text = userVM.fullName
+            name.text = userVM.fullName
             userName.text = userVM.userName
             email.text = userVM.email
             address.text = userVM.address
@@ -24,30 +24,30 @@ class UserDetailCell: UITableViewCell {
     }
     
     // MARK: - Views
-        private let displayNameLabel = CustomLabel(text: "Full Name:", font: .systemFont(ofSize: 18, weight: .black))
-        private let displayName = CustomLabel(text: "")
-        private lazy var displayNameStackView = CustomStackView(views: [displayNameLabel, displayName], axis: .vertical, distribution: .fillEqually, alignment: .fill)
-    
-        private let userNameLabel = CustomLabel(text: "Username:", font: .systemFont(ofSize: 18, weight: .black))
-        private let userName = CustomLabel(text: "")
-        private lazy var usernameStackView = CustomStackView(views: [userNameLabel, userName], axis: .vertical, distribution: .fillEqually, alignment: .fill)
-    
-        private let emailLabel = CustomLabel(text: "Email:", font: .systemFont(ofSize: 18, weight: .black))
-        private let email = CustomLabel(text: "")
-        private lazy var emailStackView = CustomStackView(views: [emailLabel, email], axis: .vertical, distribution: .fillEqually, alignment: .fill)
-    
-        private let addressLabel = CustomLabel(text: "Address:", font: .systemFont(ofSize: 18, weight: .black))
-        private let address = CustomLabel(text: "")
-        private lazy var addressStackView = CustomStackView(views: [addressLabel, address], axis: .vertical, distribution: .fillProportionally, alignment: .fill)
-    
-        private lazy var labelStackView: UIStackView = {
-            let stack = UIStackView(arrangedSubviews: [displayNameStackView, usernameStackView, emailStackView, addressStackView])
-            stack.translatesAutoresizingMaskIntoConstraints = false
-            stack.axis = .vertical
-            stack.spacing = 15
-            stack.distribution = .fill
-            return stack
-        }()
+    private let nameLabel = CustomLabel(text: "Full Name:", font: .systemFont(ofSize: 18, weight: .black))
+    private let name = CustomLabel(text: "")
+    private lazy var displayNameStackView = CustomStackView(views: [nameLabel, name], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+
+    private let usernameLabel = CustomLabel(text: "Username:", font: .systemFont(ofSize: 18, weight: .black))
+    private let userName = CustomLabel(text: "")
+    private lazy var usernameStackView = CustomStackView(views: [usernameLabel, userName], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+
+    private let emailLabel = CustomLabel(text: "Email:", font: .systemFont(ofSize: 18, weight: .black))
+    private let email = CustomLabel(text: "")
+    private lazy var emailStackView = CustomStackView(views: [emailLabel, email], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+
+    private let addressLabel = CustomLabel(text: "Address:", font: .systemFont(ofSize: 18, weight: .black))
+    private let address = CustomLabel(text: "")
+    private lazy var addressStackView = CustomStackView(views: [addressLabel, address], axis: .vertical, distribution: .fillProportionally, alignment: .fill)
+
+    private lazy var labelStackView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [displayNameStackView, usernameStackView, emailStackView, addressStackView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 15
+        stack.distribution = .fill
+        return stack
+    }()
     
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

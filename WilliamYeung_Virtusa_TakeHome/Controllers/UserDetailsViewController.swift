@@ -27,15 +27,24 @@ class UserDetailsViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavBar()
         configureUI()
         layoutUI()
     }
     
     // MARK: - Helpers
-    private func configureUI() {
-        view.backgroundColor = .systemBackground
+    private func configureNavBar() {
+        if let user = user {
+            let userVM = UserViewModel(user: user)
+            navigationItem.title = userVM.firstName + "'s Profile"
+        }
+        
         navigationController?.view.backgroundColor = .systemBackground
         navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    private func configureUI() {
+        view.backgroundColor = .systemBackground
     }
     
     private func layoutUI() {

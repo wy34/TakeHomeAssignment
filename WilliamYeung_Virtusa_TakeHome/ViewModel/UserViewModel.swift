@@ -12,7 +12,8 @@ struct UserViewModel {
     var user: User
     
     var firstName: String {
-        return user.name.components(separatedBy: " ").first ?? ""
+        let withoutPrefix = user.name.withoutPrefix()
+        return withoutPrefix.components(separatedBy: " ").first ?? ""
     }
     
     var fullName: String {
