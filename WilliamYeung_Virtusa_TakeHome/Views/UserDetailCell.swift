@@ -24,19 +24,19 @@ class UserDetailCell: UITableViewCell {
     }
     
     // MARK: - Views
-    private let nameLabel = CustomLabel(text: "Full Name:", font: .systemFont(ofSize: 18, weight: .black))
+    private let nameLabel = CustomLabel(text: "Full Name:", font: .systemFont(ofSize: 16, weight: .black))
     private let name = CustomLabel(text: "")
     private lazy var displayNameStackView = CustomStackView(views: [nameLabel, name], axis: .vertical, distribution: .fill, alignment: .fill)
 
-    private let usernameLabel = CustomLabel(text: "Username:", font: .systemFont(ofSize: 18, weight: .black))
+    private let usernameLabel = CustomLabel(text: "Username:", font: .systemFont(ofSize: 16, weight: .black))
     private let userName = CustomLabel(text: "")
     private lazy var usernameStackView = CustomStackView(views: [usernameLabel, userName], axis: .vertical, distribution: .fill, alignment: .fill)
 
-    private let emailLabel = CustomLabel(text: "Email:", font: .systemFont(ofSize: 18, weight: .black))
+    private let emailLabel = CustomLabel(text: "Email:", font: .systemFont(ofSize: 16, weight: .black))
     private let email = CustomLabel(text: "")
     private lazy var emailStackView = CustomStackView(views: [emailLabel, email], axis: .vertical, distribution: .fill, alignment: .fill)
 
-    private let addressLabel = CustomLabel(text: "Address:", font: .systemFont(ofSize: 18, weight: .black))
+    private let addressLabel = CustomLabel(text: "Address:", font: .systemFont(ofSize: 16, weight: .black))
     private let address = CustomLabel(text: "")
     private lazy var addressStackView = CustomStackView(views: [addressLabel, address], axis: .vertical, distribution: .fill, alignment: .fill)
 

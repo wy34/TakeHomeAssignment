@@ -7,24 +7,25 @@
 
 import Foundation
 
+
 class NetworkManager {
     // MARK: - Properties
     static let shared = NetworkManager()
     private let urlString = "https://jsonplaceholder.typicode.com/users"
     
     // MARK: - Helpers
-    func fetchUserDetails(completion: @escaping (Result<[User], Error>) -> Void) {
+    func fetchUserDetails(completion: @escaping (Result<[User], NetworkError>) -> Void) {
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
             
             URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    completion(.failure(error))
+                if let _ = error {
+                    completion(.failure(.unableToComplete))
                     return
                 }
                 
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-//                    completion(.failure(error))
+                    completion(.failure(.invalidResponse))
                     return
                 }
                 
@@ -33,7 +34,7 @@ class NetworkManager {
                         let users = try JSONDecoder().decode([User].self, from: data)
                         completion(.success(users))
                     } catch {
-                        completion(.failure(error))
+                        completion(.failure(.unableToParse))
                         return
                     }
                 }

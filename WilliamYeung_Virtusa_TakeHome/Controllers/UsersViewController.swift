@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UsersViewController: UIViewController {
+class UsersViewController: LoadingViewController {
     // MARK: - Properties
     private let reuseId = "UsersViewControllerCell"
     var users = [User]()
@@ -29,6 +29,8 @@ class UsersViewController: UIViewController {
         configureNavBar()
         layoutUI()
         fetchUsers()
+        
+        showLoadingSpinner()
     }
 
     // MARK: - Helpers
@@ -49,15 +51,19 @@ class UsersViewController: UIViewController {
     }
     
     private func fetchUsers() {
+        showLoadingSpinner()
+        
         NetworkManager.shared.fetchUserDetails { result in
-            switch result {
-                case .success(let users):
-                    DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                switch result {
+                    case .success(let users):
+                        self.dismissLoadingSpinner()
                         self.users = users
                         self.tableView.reloadData()
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
+                    case .failure(let error):
+                        self.dismissLoadingSpinner()
+                        self.showAlert(withTitle: "Error", message: error.rawValue)
+                }
             }
         }
     }
@@ -82,5 +88,15 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         userDetailsVC.user = user
         navigationController?.pushViewController(userDetailsVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let noUsersLabel = CustomLabel(text: "No Users...", font: .systemFont(ofSize: 16, weight: .bold))
+        noUsersLabel.textAlignment = .center
+        return noUsersLabel
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return users.isEmpty ? 250 : 0
     }
 }

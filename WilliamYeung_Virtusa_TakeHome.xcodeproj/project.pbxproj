@@ -21,6 +21,10 @@
 		4CA191C426A0A43E00747440 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191C326A0A43E00747440 /* UserViewModel.swift */; };
 		4CA191C726A0BB0B00747440 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191C626A0BB0B00747440 /* CustomStackView.swift */; };
 		4CA191CB26A0CA3400747440 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CA26A0CA3400747440 /* String.swift */; };
+		4CA191CD26A0E3B300747440 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CC26A0E3B300747440 /* NetworkError.swift */; };
+		4CA191CF26A0E3D100747440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CE26A0E3D100747440 /* ViewController.swift */; };
+		4CA191D126A0E4DB00747440 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D026A0E4DB00747440 /* LoadingViewController.swift */; };
+		4CA191D326A0E91200747440 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D226A0E91200747440 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		4CA191C326A0A43E00747440 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4CA191C626A0BB0B00747440 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		4CA191CA26A0CA3400747440 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		4CA191CC26A0E3B300747440 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4CA191CE26A0E3D100747440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CA191D026A0E4DB00747440 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		4CA191D226A0E91200747440 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 			children = (
 				4CA191BD26A09ABC00747440 /* User.swift */,
 				4CA191BF26A09D3000747440 /* Address.swift */,
+				4CA191CC26A0E3B300747440 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			children = (
 				4CA191C826A0BB1200747440 /* GenericViews */,
 				4CA191B626A0978A00747440 /* UserDetailCell.swift */,
+				4CA191D026A0E4DB00747440 /* LoadingViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				4CA191CA26A0CA3400747440 /* String.swift */,
+				4CA191CE26A0E3D100747440 /* ViewController.swift */,
+				4CA191D226A0E91200747440 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,16 +244,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA191D326A0E91200747440 /* UIView.swift in Sources */,
 				4CA191BC26A09A6E00747440 /* NetworkManager.swift in Sources */,
 				4CA191A226A0958700747440 /* UsersViewController.swift in Sources */,
+				4CA191D126A0E4DB00747440 /* LoadingViewController.swift in Sources */,
 				4CA191B926A0985300747440 /* CustomLabel.swift in Sources */,
 				4CA191C426A0A43E00747440 /* UserViewModel.swift in Sources */,
+				4CA191CF26A0E3D100747440 /* ViewController.swift in Sources */,
 				4CA191C726A0BB0B00747440 /* CustomStackView.swift in Sources */,
 				4CA191B726A0978A00747440 /* UserDetailCell.swift in Sources */,
 				4CA191CB26A0CA3400747440 /* String.swift in Sources */,
 				4CA1919E26A0958700747440 /* AppDelegate.swift in Sources */,
 				4CA191A026A0958700747440 /* SceneDelegate.swift in Sources */,
 				4CA191C026A09D3000747440 /* Address.swift in Sources */,
+				4CA191CD26A0E3B300747440 /* NetworkError.swift in Sources */,
 				4CA191BE26A09ABC00747440 /* User.swift in Sources */,
 				4CA191C226A0A01900747440 /* UserDetailsViewController.swift in Sources */,
 			);
