@@ -8,51 +8,70 @@
 import UIKit
 
 class UserDetailCell: UITableViewCell {
-//    // MARK: - Properties
-//    static let reuseId = "UserDetailCell"
-//    
-//    var user: User? {
-//        didSet {
-//            guard let user = user else { return }
-//            displayNameLabel.text = user.name
-//            userNameLabel.text = user.username
-//            emailLabel.text = user.email
-//            addressLabel.text = user.address.street
-//        }
-//    }
-//    
-//    // MARK: - Views
-//    private let displayNameLabel = CustomLabel(text: "William Yeung")
-//    private let userNameLabel = CustomLabel(text: "wy34")
-//    private let emailLabel = CustomLabel(text: "wyeung34@gmail.com")
-//    private let addressLabel = CustomLabel(text: "1415 Alvin Ave")
-//    
-//    private lazy var labelStackView: UIStackView = {
-//        let stack = UIStackView(arrangedSubviews: [displayNameLabel, userNameLabel, emailLabel, addressLabel])
-//        stack.translatesAutoresizingMaskIntoConstraints = false
-//        stack.axis = .vertical
-//        return stack
-//    }()
-//    
-//    // MARK: - Init
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        layoutUI()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//    
-//    // MARK: - Helpers
-//    private func layoutUI() {
-//        addSubview(labelStackView)
-//        
-//        NSLayoutConstraint.activate([
-//            labelStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-//            labelStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-//            labelStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-//            labelStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16)
-//        ])
-//    }
+    // MARK: - Properties
+    static let reuseId = "UserDetailCell"
+    
+    var user: User? {
+        didSet {
+            guard let user = user else { return }
+            
+            let userVM = UserViewModel(user: user)
+            displayName.text = userVM.fullName
+            userName.text = userVM.userName
+            email.text = userVM.email
+            address.text = userVM.address
+        }
+    }
+    
+    // MARK: - Views
+        private let displayNameLabel = CustomLabel(text: "Full Name:", font: .systemFont(ofSize: 18, weight: .black))
+        private let displayName = CustomLabel(text: "")
+        private lazy var displayNameStackView = CustomStackView(views: [displayNameLabel, displayName], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+    
+        private let userNameLabel = CustomLabel(text: "Username:", font: .systemFont(ofSize: 18, weight: .black))
+        private let userName = CustomLabel(text: "")
+        private lazy var usernameStackView = CustomStackView(views: [userNameLabel, userName], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+    
+        private let emailLabel = CustomLabel(text: "Email:", font: .systemFont(ofSize: 18, weight: .black))
+        private let email = CustomLabel(text: "")
+        private lazy var emailStackView = CustomStackView(views: [emailLabel, email], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+    
+        private let addressLabel = CustomLabel(text: "Address:", font: .systemFont(ofSize: 18, weight: .black))
+        private let address = CustomLabel(text: "")
+        private lazy var addressStackView = CustomStackView(views: [addressLabel, address], axis: .vertical, distribution: .fillProportionally, alignment: .fill)
+    
+        private lazy var labelStackView: UIStackView = {
+            let stack = UIStackView(arrangedSubviews: [displayNameStackView, usernameStackView, emailStackView, addressStackView])
+            stack.translatesAutoresizingMaskIntoConstraints = false
+            stack.axis = .vertical
+            stack.spacing = 15
+            stack.distribution = .fill
+            return stack
+        }()
+    
+    // MARK: - Init
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configureUI()
+        layoutUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Helpers
+    private func configureUI() {
+        address.numberOfLines = 2
+    }
+    
+    private func layoutUI() {
+        addSubview(labelStackView)
+
+        NSLayoutConstraint.activate([
+            labelStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            labelStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            labelStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
+        ])
+    }
 }

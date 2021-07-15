@@ -9,9 +9,10 @@ import UIKit
 
 class CustomLabel: UILabel {
     // MARK: - Init
-    init(text: String) {
+    init(text: String, font: UIFont? = nil) {
         super.init(frame: .zero)
         self.text = text
+        self.font = font
     }
     
     required init?(coder: NSCoder) {
