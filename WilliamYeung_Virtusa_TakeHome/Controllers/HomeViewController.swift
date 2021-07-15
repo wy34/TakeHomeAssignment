@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     // MARK: - Properties
+    var users = [User]()
     
     // MARK: - Views
     private lazy var tableView: UITableView = {
@@ -26,11 +27,23 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureNavBar()
         layoutUI()
+        
+        NetworkManager.shared.fetchUserDetails { result in
+            switch result {
+                case .success(let users):
+                    DispatchQueue.main.async {
+                        self.users = users
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
     }
 
     // MARK: - Helpers
     private func configureNavBar() {
-        navigationItem.title = "User Details"
+        navigationItem.title = "Users"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -49,11 +62,12 @@ class HomeViewController: UIViewController {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: UserDetailCell.reuseId, for: indexPath) as? UserDetailCell {
+            cell.user = users[indexPath.row]
             return cell
         } else {
             return UITableViewCell()

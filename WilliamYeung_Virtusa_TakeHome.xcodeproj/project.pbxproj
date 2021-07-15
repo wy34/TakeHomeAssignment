@@ -14,6 +14,9 @@
 		4CA191AA26A0958800747440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA191A826A0958800747440 /* LaunchScreen.storyboard */; };
 		4CA191B726A0978A00747440 /* UserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191B626A0978A00747440 /* UserDetailCell.swift */; };
 		4CA191B926A0985300747440 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191B826A0985300747440 /* CustomLabel.swift */; };
+		4CA191BC26A09A6E00747440 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191BB26A09A6E00747440 /* NetworkManager.swift */; };
+		4CA191BE26A09ABC00747440 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191BD26A09ABC00747440 /* Users.swift */; };
+		4CA191C026A09D3000747440 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191BF26A09D3000747440 /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		4CA191AB26A0958800747440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CA191B626A0978A00747440 /* UserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCell.swift; sourceTree = "<group>"; };
 		4CA191B826A0985300747440 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		4CA191BB26A09A6E00747440 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4CA191BD26A09ABC00747440 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		4CA191BF26A09D3000747440 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4CA191B126A0969F00747440 /* App */,
+				4CA191BA26A09A6600747440 /* Manager */,
 				4CA191B426A096C800747440 /* Models */,
 				4CA191B526A096CE00747440 /* Views */,
 				4CA191B226A096A800747440 /* Controllers */,
@@ -97,6 +104,8 @@
 		4CA191B426A096C800747440 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4CA191BD26A09ABC00747440 /* Users.swift */,
+				4CA191BF26A09D3000747440 /* Address.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +117,14 @@
 				4CA191B626A0978A00747440 /* UserDetailCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4CA191BA26A09A6600747440 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4CA191BB26A09A6E00747440 /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA191BC26A09A6E00747440 /* NetworkManager.swift in Sources */,
 				4CA191A226A0958700747440 /* HomeViewController.swift in Sources */,
 				4CA191B926A0985300747440 /* CustomLabel.swift in Sources */,
 				4CA191B726A0978A00747440 /* UserDetailCell.swift in Sources */,
 				4CA1919E26A0958700747440 /* AppDelegate.swift in Sources */,
 				4CA191A026A0958700747440 /* SceneDelegate.swift in Sources */,
+				4CA191C026A09D3000747440 /* Address.swift in Sources */,
+				4CA191BE26A09ABC00747440 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

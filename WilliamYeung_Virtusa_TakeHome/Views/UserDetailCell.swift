@@ -11,6 +11,16 @@ class UserDetailCell: UITableViewCell {
     // MARK: - Properties
     static let reuseId = "UserDetailCell"
     
+    var user: User? {
+        didSet {
+            guard let user = user else { return }
+            displayNameLabel.text = user.name
+            userNameLabel.text = user.username
+            emailLabel.text = user.email
+            addressLabel.text = user.address.street
+        }
+    }
+    
     // MARK: - Views
     private let displayNameLabel = CustomLabel(text: "William Yeung")
     private let userNameLabel = CustomLabel(text: "wy34")
