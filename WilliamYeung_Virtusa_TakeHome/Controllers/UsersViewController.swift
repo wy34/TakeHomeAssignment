@@ -14,7 +14,7 @@ class UsersViewController: UIViewController {
     
     // MARK: - Views
     private lazy var tableView: UITableView = {
-        let tv = UITableView()
+        let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.register(UITableViewCell.self, forCellReuseIdentifier: reuseId)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.delegate = self

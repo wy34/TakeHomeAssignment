@@ -26,19 +26,19 @@ class UserDetailCell: UITableViewCell {
     // MARK: - Views
     private let nameLabel = CustomLabel(text: "Full Name:", font: .systemFont(ofSize: 18, weight: .black))
     private let name = CustomLabel(text: "")
-    private lazy var displayNameStackView = CustomStackView(views: [nameLabel, name], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+    private lazy var displayNameStackView = CustomStackView(views: [nameLabel, name], axis: .vertical, distribution: .fill, alignment: .fill)
 
     private let usernameLabel = CustomLabel(text: "Username:", font: .systemFont(ofSize: 18, weight: .black))
     private let userName = CustomLabel(text: "")
-    private lazy var usernameStackView = CustomStackView(views: [usernameLabel, userName], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+    private lazy var usernameStackView = CustomStackView(views: [usernameLabel, userName], axis: .vertical, distribution: .fill, alignment: .fill)
 
     private let emailLabel = CustomLabel(text: "Email:", font: .systemFont(ofSize: 18, weight: .black))
     private let email = CustomLabel(text: "")
-    private lazy var emailStackView = CustomStackView(views: [emailLabel, email], axis: .vertical, distribution: .fillEqually, alignment: .fill)
+    private lazy var emailStackView = CustomStackView(views: [emailLabel, email], axis: .vertical, distribution: .fill, alignment: .fill)
 
     private let addressLabel = CustomLabel(text: "Address:", font: .systemFont(ofSize: 18, weight: .black))
     private let address = CustomLabel(text: "")
-    private lazy var addressStackView = CustomStackView(views: [addressLabel, address], axis: .vertical, distribution: .fillProportionally, alignment: .fill)
+    private lazy var addressStackView = CustomStackView(views: [addressLabel, address], axis: .vertical, distribution: .fill, alignment: .fill)
 
     private lazy var labelStackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [displayNameStackView, usernameStackView, emailStackView, addressStackView])
@@ -71,6 +71,7 @@ class UserDetailCell: UITableViewCell {
         NSLayoutConstraint.activate([
             labelStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             labelStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            labelStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             labelStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
         ])
     }

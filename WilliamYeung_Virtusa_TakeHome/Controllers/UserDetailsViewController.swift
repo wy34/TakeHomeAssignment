@@ -13,7 +13,7 @@ class UserDetailsViewController: UIViewController {
     
     // MARK: - Views
     private lazy var tableView: UITableView = {
-        let tv = UITableView()
+        let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.register(UserDetailCell.self, forCellReuseIdentifier: UserDetailCell.reuseId)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.delegate = self
