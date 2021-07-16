@@ -67,12 +67,15 @@ class UserDetailCell: UITableViewCell {
     
     private func layoutUI() {
         addSubview(labelStackView)
-
-        NSLayoutConstraint.activate([
-            labelStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            labelStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            labelStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-            labelStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
-        ])
+        labelStackView.anchor(
+            top: topAnchor,
+            trailing: trailingAnchor,
+            bottom: bottomAnchor,
+            leading: leadingAnchor,
+            paddingTop: 20,
+            paddingTrailing: 20,
+            paddingBottom: 20,
+            paddingLeading: 20
+        )
     }
 }

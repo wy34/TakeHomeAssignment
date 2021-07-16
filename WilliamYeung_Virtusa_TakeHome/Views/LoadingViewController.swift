@@ -32,20 +32,10 @@ class LoadingViewController: UIViewController {
     // MARK: - Helpers
     func showLoadingSpinner() {
         view.addSubview(containerView)
-        
-        NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: view.topAnchor),
-            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        ])
+        containerView.fillSuperView(view)
         
         containerView.addSubview(loadingSpinner)
-        
-        NSLayoutConstraint.activate([
-            loadingSpinner.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            loadingSpinner.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: -30)
-        ])
+        loadingSpinner.center(x: containerView.centerXAnchor, y: containerView.centerYAnchor, yPadding: -50)
     }
     
     func dismissLoadingSpinner() {
