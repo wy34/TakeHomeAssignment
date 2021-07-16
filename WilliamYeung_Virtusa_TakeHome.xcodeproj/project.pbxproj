@@ -25,6 +25,7 @@
 		4CA191D126A0E4DB00747440 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D026A0E4DB00747440 /* LoadingViewController.swift */; };
 		4CA191D326A0E91200747440 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D226A0E91200747440 /* UIView.swift */; };
 		4CA191DB26A137C500747440 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191DA26A137C500747440 /* UserViewModelTests.swift */; };
+		4CA29F9926A1B75000A6F42D /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA29F9826A1B75000A6F42D /* Side.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		4CA191D826A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WilliamYeung_Virtusa_TakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA191DA26A137C500747440 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		4CA191DC26A137C500747440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CA29F9826A1B75000A6F42D /* Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				4CA191BD26A09ABC00747440 /* User.swift */,
 				4CA191BF26A09D3000747440 /* Address.swift */,
 				4CA191CC26A0E3B300747440 /* NetworkError.swift */,
+				4CA29F9826A1B75000A6F42D /* Side.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				4CA191C726A0BB0B00747440 /* CustomStackView.swift in Sources */,
 				4CA191B726A0978A00747440 /* UserDetailCell.swift in Sources */,
 				4CA1919E26A0958700747440 /* AppDelegate.swift in Sources */,
+				4CA29F9926A1B75000A6F42D /* Side.swift in Sources */,
 				4CA191A026A0958700747440 /* SceneDelegate.swift in Sources */,
 				4CA191C026A09D3000747440 /* Address.swift in Sources */,
 				4CA191CD26A0E3B300747440 /* NetworkError.swift in Sources */,

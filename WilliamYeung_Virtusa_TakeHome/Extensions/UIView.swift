@@ -72,4 +72,38 @@ extension UIView {
             centerYAnchor.constraint(equalTo: y, constant: yPadding).isActive = true
         }
     }
+    
+    /// Adds a border to the specified side of a view
+    ///
+    /// - Parameters:
+    ///     - side: The side that you want to add a border to (top, right, bottom, or left)
+    ///     - bgColor: The color of the border
+    ///     - dimension: The thickness of the border line
+    func addBorder(side: Side, bgColor: UIColor, dimension: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = bgColor
+        border.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(border)
+        
+        let topConstraint = border.topAnchor.constraint(equalTo: topAnchor)
+        let trailingConstraint = border.trailingAnchor.constraint(equalTo: trailingAnchor)
+        let bottomConstraint = border.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 6)
+        let leadingConstraint = border.leadingAnchor.constraint(equalTo: leadingAnchor)
+        let widthConstraint = border.widthAnchor.constraint(equalToConstant: dimension)
+        let heightConstraint = border.heightAnchor.constraint(equalToConstant: dimension)
+        
+        switch side {
+            case .top:
+                NSLayoutConstraint.activate([leadingConstraint, topConstraint, trailingConstraint, heightConstraint])
+            case .right:
+                NSLayoutConstraint.activate([topConstraint, trailingConstraint, bottomConstraint, widthConstraint])
+            case .bottom:
+                NSLayoutConstraint.activate([leadingConstraint, bottomConstraint, trailingConstraint, heightConstraint])
+            case .left:
+                NSLayoutConstraint.activate([topConstraint, leadingConstraint, bottomConstraint, widthConstraint])
+        }
+    }
 }
+
+
+
