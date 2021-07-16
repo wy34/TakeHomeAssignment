@@ -64,7 +64,7 @@ class UserDetailCell: UITableViewCell {
     private func configureUI() {
         address.numberOfLines = 2
         [nameLabel, usernameLabel, emailLabel, addressLabel].forEach({ $0.textColor = .systemGray2 })
-        [nameStackView, usernameStackView, emailStackView].forEach({ $0.addBorder(side: .bottom, bgColor: .systemGray6, dimension: 2) })
+        [nameStackView, usernameStackView, emailStackView].forEach({ $0.addBorder(side: .bottom, bgColor: .separator, dimension: 0.5) })
     }
     
     private func layoutUI() {
