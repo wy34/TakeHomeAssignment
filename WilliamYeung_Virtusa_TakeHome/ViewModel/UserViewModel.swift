@@ -37,14 +37,17 @@ struct UserViewModel {
         self.user = user
     }
     
-    // MARK: - Helper
+    // MARK: - Helpers
     /// Returns a user's name without  "Mr." or "Mrs."
+    ///
+    /// - Parameters:
+    ///     - None
     func nameWithoutPrefix() -> String {
         let lowerCased = user.name.lowercased()
         
         if lowerCased.hasPrefix("mr. ") {
             return lowerCased.dropFirst("mr. ".count).capitalized
-        } else if lowerCased.hasPrefix("mrs. ") {
+        } else if lowerCased.hasPrefix("mrs. ") || lowerCased.hasPrefix("miss "){
             return lowerCased.dropFirst("mrs. ".count).capitalized
         }
 

@@ -24,7 +24,18 @@
 		4CA191CF26A0E3D100747440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CE26A0E3D100747440 /* ViewController.swift */; };
 		4CA191D126A0E4DB00747440 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D026A0E4DB00747440 /* LoadingViewController.swift */; };
 		4CA191D326A0E91200747440 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D226A0E91200747440 /* UIView.swift */; };
+		4CA191DB26A137C500747440 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191DA26A137C500747440 /* UserViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CA191DD26A137C500747440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CA1919226A0958700747440 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CA1919926A0958700747440;
+			remoteInfo = WilliamYeung_Virtusa_TakeHome;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4CA1919A26A0958700747440 /* WilliamYeung_Virtusa_TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilliamYeung_Virtusa_TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +57,20 @@
 		4CA191CE26A0E3D100747440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CA191D026A0E4DB00747440 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4CA191D226A0E91200747440 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		4CA191D826A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WilliamYeung_Virtusa_TakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CA191DA26A137C500747440 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		4CA191DC26A137C500747440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4CA1919726A0958700747440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CA191D526A137C500747440 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4CA1919C26A0958700747440 /* WilliamYeung_Virtusa_TakeHome */,
+				4CA191D926A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests */,
 				4CA1919B26A0958700747440 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				4CA1919A26A0958700747440 /* WilliamYeung_Virtusa_TakeHome.app */,
+				4CA191D826A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +195,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4CA191D926A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CA191DA26A137C500747440 /* UserViewModelTests.swift */,
+				4CA191DC26A137C500747440 /* Info.plist */,
+			);
+			path = WilliamYeung_Virtusa_TakeHomeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +224,24 @@
 			productReference = 4CA1919A26A0958700747440 /* WilliamYeung_Virtusa_TakeHome.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4CA191D726A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CA191DF26A137C500747440 /* Build configuration list for PBXNativeTarget "WilliamYeung_Virtusa_TakeHomeTests" */;
+			buildPhases = (
+				4CA191D426A137C500747440 /* Sources */,
+				4CA191D526A137C500747440 /* Frameworks */,
+				4CA191D626A137C500747440 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CA191DE26A137C500747440 /* PBXTargetDependency */,
+			);
+			name = WilliamYeung_Virtusa_TakeHomeTests;
+			productName = WilliamYeung_Virtusa_TakeHomeTests;
+			productReference = 4CA191D826A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +253,10 @@
 				TargetAttributes = {
 					4CA1919926A0958700747440 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					4CA191D726A137C500747440 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4CA1919926A0958700747440;
 					};
 				};
 			};
@@ -220,6 +274,7 @@
 			projectRoot = "";
 			targets = (
 				4CA1919926A0958700747440 /* WilliamYeung_Virtusa_TakeHome */,
+				4CA191D726A137C500747440 /* WilliamYeung_Virtusa_TakeHomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +286,13 @@
 			files = (
 				4CA191AA26A0958800747440 /* LaunchScreen.storyboard in Resources */,
 				4CA191A726A0958800747440 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CA191D626A137C500747440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +321,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CA191D426A137C500747440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CA191DB26A137C500747440 /* UserViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CA191DE26A137C500747440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CA1919926A0958700747440 /* WilliamYeung_Virtusa_TakeHome */;
+			targetProxy = 4CA191DD26A137C500747440 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4CA191A826A0958800747440 /* LaunchScreen.storyboard */ = {
@@ -427,6 +505,46 @@
 			};
 			name = Release;
 		};
+		4CA191E026A137C500747440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YNSMJAS38V;
+				INFOPLIST_FILE = WilliamYeung_Virtusa_TakeHomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamyeung.WilliamYeung-Virtusa-TakeHomeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WilliamYeung_Virtusa_TakeHome.app/WilliamYeung_Virtusa_TakeHome";
+			};
+			name = Debug;
+		};
+		4CA191E126A137C500747440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YNSMJAS38V;
+				INFOPLIST_FILE = WilliamYeung_Virtusa_TakeHomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamyeung.WilliamYeung-Virtusa-TakeHomeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WilliamYeung_Virtusa_TakeHome.app/WilliamYeung_Virtusa_TakeHome";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +562,15 @@
 			buildConfigurations = (
 				4CA191AF26A0958800747440 /* Debug */,
 				4CA191B026A0958800747440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CA191DF26A137C500747440 /* Build configuration list for PBXNativeTarget "WilliamYeung_Virtusa_TakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CA191E026A137C500747440 /* Debug */,
+				4CA191E126A137C500747440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

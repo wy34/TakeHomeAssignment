@@ -8,8 +8,6 @@
 import UIKit
 
 class LoadingViewController: UIViewController {
-    // MARK: - Properties
-    
     // MARK: - Views
     private let containerView: UIView = {
         let view = UIView()
