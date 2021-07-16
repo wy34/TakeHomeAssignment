@@ -16,9 +16,9 @@ class UsersViewController: LoadingViewController {
     private lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.register(UITableViewCell.self, forCellReuseIdentifier: reuseId)
-        tv.translatesAutoresizingMaskIntoConstraints = false
         tv.delegate = self
         tv.dataSource = self
+        tv.translatesAutoresizingMaskIntoConstraints = false
         tv.tableFooterView = UIView()
         return tv
     }()
@@ -29,8 +29,6 @@ class UsersViewController: LoadingViewController {
         configureNavBar()
         layoutUI()
         fetchUsers()
-        
-        showLoadingSpinner()
     }
 
     // MARK: - Helpers
@@ -38,16 +36,10 @@ class UsersViewController: LoadingViewController {
         navigationItem.title = "Users"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+
     private func layoutUI() {
         view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        ])
+        tableView.fillSuperView(view)
     }
     
     private func fetchUsers() {

@@ -20,7 +20,6 @@
 		4CA191C226A0A01900747440 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191C126A0A01900747440 /* UserDetailsViewController.swift */; };
 		4CA191C426A0A43E00747440 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191C326A0A43E00747440 /* UserViewModel.swift */; };
 		4CA191C726A0BB0B00747440 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191C626A0BB0B00747440 /* CustomStackView.swift */; };
-		4CA191CB26A0CA3400747440 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CA26A0CA3400747440 /* String.swift */; };
 		4CA191CD26A0E3B300747440 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CC26A0E3B300747440 /* NetworkError.swift */; };
 		4CA191CF26A0E3D100747440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191CE26A0E3D100747440 /* ViewController.swift */; };
 		4CA191D126A0E4DB00747440 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA191D026A0E4DB00747440 /* LoadingViewController.swift */; };
@@ -43,7 +42,6 @@
 		4CA191C126A0A01900747440 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		4CA191C326A0A43E00747440 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4CA191C626A0BB0B00747440 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
-		4CA191CA26A0CA3400747440 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4CA191CC26A0E3B300747440 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		4CA191CE26A0E3D100747440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CA191D026A0E4DB00747440 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		4CA191C926A0CA2700747440 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4CA191CA26A0CA3400747440 /* String.swift */,
 				4CA191CE26A0E3D100747440 /* ViewController.swift */,
 				4CA191D226A0E91200747440 /* UIView.swift */,
 			);
@@ -253,7 +250,6 @@
 				4CA191CF26A0E3D100747440 /* ViewController.swift in Sources */,
 				4CA191C726A0BB0B00747440 /* CustomStackView.swift in Sources */,
 				4CA191B726A0978A00747440 /* UserDetailCell.swift in Sources */,
-				4CA191CB26A0CA3400747440 /* String.swift in Sources */,
 				4CA1919E26A0958700747440 /* AppDelegate.swift in Sources */,
 				4CA191A026A0958700747440 /* SceneDelegate.swift in Sources */,
 				4CA191C026A09D3000747440 /* Address.swift in Sources */,

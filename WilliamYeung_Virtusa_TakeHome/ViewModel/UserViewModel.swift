@@ -12,7 +12,7 @@ struct UserViewModel {
     var user: User
     
     var firstName: String {
-        let withoutPrefix = user.name.withoutPrefix()
+        let withoutPrefix = nameWithoutPrefix()
         return withoutPrefix.components(separatedBy: " ").first ?? ""
     }
     
@@ -38,5 +38,16 @@ struct UserViewModel {
     }
     
     // MARK: - Helper
-    
+    /// Returns a user's name without  "Mr." or "Mrs."
+    func nameWithoutPrefix() -> String {
+        let lowerCased = user.name.lowercased()
+        
+        if lowerCased.hasPrefix("mr. ") {
+            return lowerCased.dropFirst("mr. ".count).capitalized
+        } else if lowerCased.hasPrefix("mrs. ") {
+            return lowerCased.dropFirst("mrs. ".count).capitalized
+        }
+
+        return user.name
+    }
 }

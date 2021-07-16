@@ -36,7 +36,7 @@ class UserDetailsViewController: UIViewController {
     private func configureNavBar() {
         if let user = user {
             let userVM = UserViewModel(user: user)
-            navigationItem.title = userVM.firstName + "'s Profile"
+            navigationItem.title = userVM.firstName + "'s Details"
         }
         
         navigationController?.view.backgroundColor = .systemBackground
@@ -49,13 +49,7 @@ class UserDetailsViewController: UIViewController {
     
     private func layoutUI() {
         view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        ])
+        tableView.fillSuperView(view)
     }
 }
 

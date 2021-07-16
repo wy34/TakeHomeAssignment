@@ -14,6 +14,10 @@ class NetworkManager {
     private let urlString = "https://jsonplaceholder.typicode.com/users"
     
     // MARK: - Helpers
+    /// Fetches users data from a server
+    ///
+    /// - Parameters:
+    ///     - completion: A completion method to call that returns either an array of User objects or a Network Error
     func fetchUserDetails(completion: @escaping (Result<[User], NetworkError>) -> Void) {
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
